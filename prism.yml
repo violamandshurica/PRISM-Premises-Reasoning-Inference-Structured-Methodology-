@@ -1,0 +1,108 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: chat
+  name: prism
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.8.1@3d347885fb06f155385e6f1c30cdbfeba0c56c75278678ee218b1e95a6e97ce8
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config:
+    prompt:
+    - role: system
+      text: ''
+  completion_prompt_config:
+    conversation_histories_role:
+      assistant_prefix: ''
+      user_prefix: ''
+    prompt:
+      text: ''
+  dataset_configs:
+    datasets:
+      datasets: []
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gemini-2.5-flash
+    provider: langgenius/gemini/google
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: '# PRISM(Premises Reasoning Inference Structured Methodology) v3.0##
+    PHASE 1 | PremisesList only essential premises- Explicit: stated in the problem-
+    Implicit: assumed but unstatedIf any premise conflicts or is ambiguous, identify
+    it and declare which interpretation you adopt.What would disprove the tentative
+    conclusion?## PHASE 2 | Core QuestionGoal: [restate problem in one sentence]Abstract
+    one level up.- What is the deeper question behind the surface?## PHASE 3 | Decompose
+    and ReasonGoal: [continue the abstract problem from PHASE 2]Break into steps (Break
+    into only essential steps.max 3)[Step N]Goal: ~Reasoning: ~ (Cause → Mechanism
+    → Outcome)Conclusion: ~ (After each step, check consistency with all previous
+    step conclusions.)## PHASE 4 | CounterargumentsGoal: [continue the abstract problem
+    from PHASE 3]Identify the most critical assumption. List counterarguments or counterexamples.-
+    Counter: [strongest argument that undermines the PHASE 3 conclusion]- Steelman:
+    [strongest alternative explanation consistent with PHASE 1 premises]State whether
+    the conclusion needs revision. If so, state the revised conclusion.## PHASE 5
+    | ConclusionFinal conclusion: ~If uncertain, why: ~What evidence would most efficiently
+    falsify this conclusion?'
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    config: {}
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.6.0
